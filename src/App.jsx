@@ -1,15 +1,16 @@
-import React from 'react'
-import { Navbar } from './components/Navbar/Navbar'
-import Hero from './components/Hero/Hero'
+import React from "react";
+import { Navbar } from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero";
 
 const App = () => {
   return (
-    <div className=' overflow-x-hidden max-w-6xl mx-auto px-4'>
-        <Navbar />
+    <div>
+      <Navbar />
+      <main className="max-w-6xl mx-auto overflow-hidden">
         <Hero />
-        <div className="h-[3000px]"></div>
+      </main>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;

@@ -34,15 +34,16 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="z-50 rounded-full bg-yellow-0 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 w-full fixed top-5 max-w-6xl mx-auto border border-gray-900">
-        <div className="flex items-center justify-between relative px-10 py-5">
+      <nav className="sticky rounded-full py-3 px-5 w-full top-5 left-0 max-w-6xl mx-auto z-50 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 ">
+
+        <div className="flex items-center justify-between relative">
           {/* links left */}
           <ul className="items-center gap-10 hidden md:flex">
             {linksLeft.map((link) => (
               <li>
                 <a
                   href="#"
-                  className="capitalize font-normal hover:text-primary transition-colors duration-200"
+                  className="uppercase font-bold text-sm hover:text-primary transition-colors duration-200"
                 >
                   {link.name}
                 </a>
@@ -50,7 +51,7 @@ export const Navbar = () => {
             ))}
           </ul>
           {/* Logo */}
-          <div className=" cursor-default absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex  items-center  gap-x-2 font-bold">
+          <div className=" text-lg cursor-default absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex  items-center  gap-x-2 font-bold italic">
             DEATH{" "}
             <span>
               <BiCoffeeTogo className=" text-primary" />
@@ -64,7 +65,7 @@ export const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className=" capitalize font-normal hover:text-primary transition-colors duration-200"
+                    className="uppercase font-bold text-sm hover:text-primary transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -77,8 +78,8 @@ export const Navbar = () => {
                 size={25}
                 className=" cursor-pointer relative text-primary"
               />
-              <span className=" absolute top-3 left-6 font-extrabold text-sm">
-                1
+              <span className=" absolute top-4 left-5 font-extrabold text-xs text-gray-300">
+                0
               </span>
             </div>
           </div>
@@ -89,7 +90,7 @@ export const Navbar = () => {
         </div>
       </nav>
       {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black z-50 text-center md:hidden">
+        <div className="fixed top-0 left-0 w-full h-full bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-30 z-50 text-center md:hidden">
           {/* close */}
           <button
             onClick={() => setIsOpen(false)}
@@ -99,7 +100,7 @@ export const Navbar = () => {
           </button>
 
           {/* Logo */}
-          <div className=" absolute left-1/2 -translate-x-1/2 top-10 text-center flex items-center gap-x-2 font-bold">
+          <div className=" absolute left-1/2 -translate-x-1/2 top-10 text-center flex items-center gap-x-2 font-bold italic">
             DEATH{" "}
             <span>
               <BiCoffeeTogo className=" text-primary" />
@@ -108,7 +109,7 @@ export const Navbar = () => {
           </div>
 
           {/* links left */}
-          <ul className="flex items-center flex-col gap-8 pt-32">
+          <ul className="flex items-center flex-col gap-4 pt-32">
             {linksLeft.map((link) => (
               <li>
                 <a
@@ -121,7 +122,7 @@ export const Navbar = () => {
               </li>
             ))}
           </ul>
-          <ul className="flex items-center flex-col gap-8 pt-8">
+          <ul className="flex items-center flex-col gap-4 pt-4">
             {linksRight.map((link) => (
               <li>
                 <a

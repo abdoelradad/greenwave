@@ -6,9 +6,9 @@ import { Typewriter } from "react-simple-typewriter";
 import bb from "../../assets/bb.png";
 const Hero = () => {
   return (
-    <section className="pt-32 text-5xl w-full min-h-screen relative">
-      <img src={bb} alt="" className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-5 -z-10" />
-      <div className="grid grid-cols-1 text-center">
+    <section className="pt-24 min-h-screen">
+      <div className="grid grid-cols-1 text-center relative">
+        <img src={bb} alt="" className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-5 -z-10" />
         <p className="text-sm italic text-gray-400 capitalize mb-2">
           <Typewriter
             words={["since 1988", "owner boda", "based on portsaid"]}
