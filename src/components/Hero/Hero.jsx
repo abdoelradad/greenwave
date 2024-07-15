@@ -27,7 +27,7 @@ const Hero = () => {
           className="title text-5xl md:text-6xl cursor-default tracking-tight font-bold"
         >
           <span className=" text-primary relative">
-            Coffee <img src={line} alt="" className=" absolute top-0 right-2" />
+            Coffee 
           </span>
           as you expect <br />
           only for <span className=" text-primary inline-block">you</span>
