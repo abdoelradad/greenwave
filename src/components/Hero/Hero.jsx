@@ -4,17 +4,19 @@ import line from "../../assets/arrow.png";
 import { motion } from "framer-motion";
 import { Typewriter } from "react-simple-typewriter";
 import bb from "../../assets/bb.png";
+import bg from "../../assets/bg.png";
+
 const Hero = () => {
   return (
-    <section className="pt-24 min-h-screen">
+    <section className="pt-24">
       <div className="grid grid-cols-1 text-center relative">
         <img src={bb} alt="" className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-5 -z-10" />
-        <p className="text-sm italic text-gray-400 capitalize mb-2">
+        <p className="text-sm italic text-gray-500 capitalize mb-2">
           <Typewriter
             words={["since 1988", "owner boda", "based on portsaid"]}
             loop={true}
             cursor
-            cursorStyle="|"
+            cursorStyle="_"
           />
         </p>
 

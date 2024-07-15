@@ -34,16 +34,15 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="sticky rounded-full py-3 px-5 w-full top-5 left-0 max-w-6xl mx-auto z-50 bg-gray-400 bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-0 ">
-
-        <div className="flex items-center justify-between relative">
+      <nav className="sticky w-full top-0 left-0 z-50 bg-[#121212] shadow-sm py-5 px-4">
+        <div className="flex items-center justify-between w-full max-w-6xl mx-auto relative">
           {/* links left */}
           <ul className="items-center gap-10 hidden md:flex">
             {linksLeft.map((link) => (
               <li>
                 <a
                   href="#"
-                  className="uppercase font-bold text-sm hover:text-primary transition-colors duration-200"
+                  className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200"
                 >
                   {link.name}
                 </a>
@@ -51,7 +50,7 @@ export const Navbar = () => {
             ))}
           </ul>
           {/* Logo */}
-          <div className=" text-lg cursor-default absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex  items-center  gap-x-2 font-bold italic">
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-x-1 font-bold">
             DEATH{" "}
             <span>
               <BiCoffeeTogo className=" text-primary" />
@@ -65,7 +64,7 @@ export const Navbar = () => {
                 <li>
                   <a
                     href="#"
-                    className="uppercase font-bold text-sm hover:text-primary transition-colors duration-200"
+                    className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -90,7 +89,7 @@ export const Navbar = () => {
         </div>
       </nav>
       {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white-400 rounded-md bg-clip-padding backdrop-filter backdrop-blur-lg bg-opacity-30 z-50 text-center md:hidden">
+        <div className="fixed top-0 left-0 w-full h-full bg-white-400 rounded-md bg-[#121212] z-50 text-center md:hidden">
           {/* close */}
           <button
             onClick={() => setIsOpen(false)}
