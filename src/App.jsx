@@ -8,7 +8,7 @@ const App = () => {
   return (
     <div>
       <Navbar />
-      <main className="max-w-6xl mx-auto overflow-hidden">
+      <main className="max-w-6xl mx-auto overflow-hidden px-5">
         <Hero />
         <About />
         <Menu />

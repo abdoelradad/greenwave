@@ -11,15 +11,14 @@ const Hero = () => {
     <section className="pt-24">
       <div className="grid grid-cols-1 text-center relative">
         <img src={bb} alt="" className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-5 -z-10" />
-        <p className="text-sm italic text-gray-500 capitalize mb-2">
+        <p className="text-sm uppercase text-gray-500 mb-4">
           <Typewriter
             words={["since 1988", "owner boda", "based on portsaid"]}
             loop={true}
             cursor
-            cursorStyle="_"
+            cursorStyle="|"
           />
         </p>
-
         <motion.h1
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
@@ -27,7 +26,7 @@ const Hero = () => {
           className="title text-5xl md:text-6xl cursor-default tracking-tight font-bold"
         >
           <span className=" text-primary relative">
-            Coffee 
+            Coffee{" "}
           </span>
           as you expect <br />
           only for <span className=" text-primary inline-block">you</span>

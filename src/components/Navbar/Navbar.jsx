@@ -4,18 +4,23 @@ import { FiMenu } from "react-icons/fi";
 import { IoBagHandleOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
+
 const linksLeft = [
   {
     name: "home",
+    href: "/",
   },
   {
     name: "about",
+    href: "#about",
   },
   {
     name: "menu",
+    href: "#menu",
   },
   {
     name: "gallary",
+    href: "#gallary",
   },
 ];
 const linksRight = [
@@ -34,14 +39,14 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="sticky w-full top-0 left-0 z-50 bg-[#121212] shadow-sm py-5 px-4">
+      <nav className="sticky w-full top-0 left-0 z-50 bg-[#121212] shadow-md py-8 px-5">
         <div className="flex items-center justify-between w-full max-w-6xl mx-auto relative">
           {/* links left */}
           <ul className="items-center gap-10 hidden md:flex">
             {linksLeft.map((link) => (
               <li>
                 <a
-                  href="#"
+                  href={link.href}
                   className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200"
                 >
                   {link.name}
@@ -50,7 +55,7 @@ export const Navbar = () => {
             ))}
           </ul>
           {/* Logo */}
-          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-x-1 font-bold">
+          <div className=" font-extrabold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-x-1">
             DEATH{" "}
             <span>
               <BiCoffeeTogo className=" text-primary" />
