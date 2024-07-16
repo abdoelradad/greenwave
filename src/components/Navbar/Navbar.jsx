@@ -1,14 +1,14 @@
 import React, { useState } from "react";
 import { BiCoffeeTogo } from "react-icons/bi";
 import { FiMenu } from "react-icons/fi";
-import { IoBagHandleOutline } from "react-icons/io5";
 import { IoClose } from "react-icons/io5";
 
-
+import { TfiMenu } from "react-icons/tfi";
+import Logo from "../Logo/Logo";
 const linksLeft = [
   {
     name: "home",
-    href: "/",
+    href: "#",
   },
   {
     name: "about",
@@ -18,20 +18,19 @@ const linksLeft = [
     name: "menu",
     href: "#menu",
   },
-  {
-    name: "gallary",
-    href: "#gallary",
-  },
 ];
 const linksRight = [
   {
     name: "blog",
+    href: "#blog",
   },
   {
     name: "shop",
+    href: "#shop",
   },
   {
     name: "contact",
+    href: "#contact",
   },
 ];
 
@@ -39,78 +38,52 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="sticky w-full top-0 left-0 z-50 bg-[#121212] shadow-md py-8 px-5">
-        <div className="flex items-center justify-between w-full max-w-6xl mx-auto relative">
-          {/* links left */}
-          <ul className="items-center gap-10 hidden md:flex">
+      <nav className="sticky w-full top-0 left-0 z-50 bg-[#121212] py-6 px-3">
+        <div className="flex items-center justify-between w-full max-w-6xl mx-auto relative px-3">
+          <ul className="hidden md:flex md:items-center gap-10">
             {linksLeft.map((link) => (
               <li>
                 <a
                   href={link.href}
-                  className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200"
+                  className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200 tracking-[1px]"
                 >
                   {link.name}
                 </a>
               </li>
             ))}
           </ul>
-          {/* Logo */}
-          <div className=" font-extrabold absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex items-center gap-x-1">
-            DEATH{" "}
-            <span>
-              <BiCoffeeTogo className=" text-primary" />
-            </span>{" "}
-            COFFEE
-          </div>
-          {/* links right */}
+          <Logo />
           <div className="flex items-center gap-x-10">
             <ul className="items-center gap-10 hidden md:flex">
               {linksRight.map((link) => (
                 <li>
                   <a
                     href="#"
-                    className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200"
+                    className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200 tracking-[1px]"
                   >
                     {link.name}
                   </a>
                 </li>
               ))}
             </ul>
-
-            <div className="relative">
-              <IoBagHandleOutline
-                size={25}
-                className=" cursor-pointer relative text-primary"
-              />
-              <span className=" absolute top-4 left-5 font-extrabold text-xs text-gray-300">
-                0
-              </span>
-            </div>
           </div>
-
           <button className="md:hidden" onClick={() => setIsOpen(!isOpen)}>
-            <FiMenu size={25} />
+            <TfiMenu size={20} className=" text-primary" />
           </button>
         </div>
-      </nav>
-      {isOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-white-400 rounded-md bg-[#121212] z-50 text-center md:hidden">
+        <div
+          className={` ${
+            isOpen ? "top-0" : "top-[-100%]"
+          } fixed left-0 w-full h-[60%] shadow-md bg-[#121212] z-50 text-center md:hidden transition-all duration-300`}
+        >
+          {isOpen && <div className=" fixed top-0 left-0 w-full h-full -z-10 bg-black opacity-70"></div>}
           {/* close */}
           <button
             onClick={() => setIsOpen(false)}
-            className=" absolute right-6 top-9"
+            className=" absolute right-6 top-5"
           >
             <IoClose size={30} />
           </button>
-
-          {/* Logo */}
-          <div className=" absolute left-1/2 -translate-x-1/2 top-10 text-center flex items-center gap-x-2 font-bold italic">
-            DEATH{" "}
-            <span>
-              <BiCoffeeTogo className=" text-primary" />
-            </span>{" "}
-            COFFEE
-          </div>
 
           {/* links left */}
           <ul className="flex items-center flex-col gap-4 pt-32">
@@ -140,7 +113,7 @@ export const Navbar = () => {
             ))}
           </ul>
         </div>
-      )}
+      </nav>
     </>
   );
 };
