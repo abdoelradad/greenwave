@@ -1,36 +1,73 @@
 import React from "react";
-import bg from "../../assets/hero.png";
+import coffee from "../../assets/coffee.png";
 import { motion } from "framer-motion";
+import { PiCoffeeBeanBold } from "react-icons/pi";
+import { PiCoffeeBold } from "react-icons/pi";
+import { PiTimerBold } from "react-icons/pi";
+import { LuLeafyGreen } from "react-icons/lu";
+import { PiUsersThreeFill } from "react-icons/pi";
+import { IoPricetagsOutline } from "react-icons/io5";
+
+const left = [
+  {
+    name: "Best Coffee",
+    description: "Aromatic blend with a hint of chocolate and caramel notes.",
+    icon: <PiCoffeeBeanBold size={30} />,
+  },
+  {
+    name: "Quick service",
+    description: "Smooth espresso with a velvety crema and robust flavor.",
+    icon: <PiCoffeeBold  size={30} />,
+  },
+  {
+    name: "From Nature",
+    description: "Smooth espresso with a velvety crema and robust flavor.",
+    icon: <LuLeafyGreen  size={30} />,
+  },
+
+];
+const right = [
+  {
+    name: "from  nature to you",
+    description: "Aromatic blend with a hint of chocolate and caramel notes.",
+    icon: <LuLeafyGreen />,
+  },
+  {
+    name: "Good Staff",
+    description: "Smooth espresso with a velvety crema and robust flavor.",
+    icon: <PiUsersThreeFill />,
+  },
+  {
+    name: "Best Price",
+    description: "Refreshing cold brew with a crisp, clean finish.",
+    icon: <IoPricetagsOutline />,
+  },
+];
 
 const About = () => {
   return (
-    <section className="py-24 relative" id="about">
-      <motion.h1
-        initial={{ opacity: 0, x: -100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1.5 }}
-        className="title text-4xl md:text-5xl cursor-default tracking-tight font-bold capitalize text-center "
-      >
-        <span className=" text-primary">our</span> story
-      </motion.h1>
-      <img
-        src={bg}
-        alt=""
-        className=" absolute -z-50 bg-cover top-0 md:-top-32 opacity-60"
-      />
-      <motion.p
-        initial={{ y: 100, opacity: 0 }}
-        whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 2 }}
-        className="text-center max-w-xl mx-auto leading-7 text-sm my-10 text-text"
-      >
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo eveniet
-        libero tempora expedita impedit magni inventore quis molestias maxime
-        iure, blanditiis eligendi similique eum incidunt quam placeat sequi
-        ratione voluptatem. libero tempora expedita impedit magni inventore quis
-        molestias maxime iure, blanditiis eligendi similique eum incidunt quam
-        placeat sequi ratione voluptatem.
-      </motion.p>
+    <section className="py-24 relative bg-[#141414]" id="about">
+      <div className="max-w-6xl mx-auto overflow-hidden px-5 relative">
+        <h1 className="title text-4xl md:text-5xl cursor-default tracking-tight font-bold capitalize text-center ">
+          <span className=" text-primary">our</span> story
+        </h1>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-24 place-items-center">
+          <div className="w-full flex items-center flex-col gap-10">
+            {left.map((item) => (
+              <div className="flex flex-col md:flex-row items-center md:items-start justify-between gap-5">
+                <span className="text-primary md:pt-[4px]">{item.icon}</span>
+                <div className="text-center md:text-left">
+                  <h3 className="text-lg mb-1">{item.name}</h3>
+
+                  <p className="text-sm text-gray-400 max-w-[200px] mx-auto">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <img src={coffee} alt="" className="w-[350px] bg-cover" />
+        </div>
+      </div>
     </section>
   );
 };

@@ -45,21 +45,23 @@ export const Navbar = () => {
               <li>
                 <a
                   href={link.href}
-                  className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200 tracking-[1px]"
+                  className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200"
                 >
                   {link.name}
                 </a>
               </li>
             ))}
           </ul>
-          <Logo />
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+            <Logo />
+          </div>
           <div className="flex items-center gap-x-10">
             <ul className="items-center gap-10 hidden md:flex">
               {linksRight.map((link) => (
                 <li>
                   <a
                     href="#"
-                    className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200 tracking-[1px]"
+                    className="uppercase font-normal text-sm hover:text-primary transition-colors duration-200"
                   >
                     {link.name}
                   </a>
@@ -71,12 +73,15 @@ export const Navbar = () => {
             <TfiMenu size={20} className=" text-primary" />
           </button>
         </div>
+        {/* menu */}
         <div
           className={` ${
             isOpen ? "top-0" : "top-[-100%]"
-          } fixed left-0 w-full h-[60%] shadow-md bg-[#121212] z-50 text-center md:hidden transition-all duration-300`}
+          } fixed left-0 w-full h-[60%] shadow-md bg-[#121212] z-50 text-center md:hidden transition-all duration-300 overflow-hidden`}
         >
-          {isOpen && <div className=" fixed top-0 left-0 w-full h-full -z-10 bg-black opacity-70"></div>}
+          {isOpen && (
+            <div className=" fixed top-0 left-0 w-full h-full -z-10 bg-black opacity-80"></div>
+          )}
           {/* close */}
           <button
             onClick={() => setIsOpen(false)}
@@ -84,15 +89,18 @@ export const Navbar = () => {
           >
             <IoClose size={30} />
           </button>
-
+          {/* logo */}
+          <div className="flex justify-center pt-6">
+            <Logo className="w-fit bg-red-200" />
+          </div>
           {/* links left */}
-          <ul className="flex items-center flex-col gap-4 pt-32">
+          <ul className="flex items-center flex-col gap-4 pt-10">
             {linksLeft.map((link) => (
               <li>
                 <a
                   href="#"
                   onClick={() => setIsOpen(false)}
-                  className=" capitalize font-normal text-lg hover:text-primary transition-colors duration-200"
+                  className="uppercase text-lg"
                 >
                   {link.name}
                 </a>
@@ -105,7 +113,7 @@ export const Navbar = () => {
                 <a
                   href="#"
                   onClick={() => setIsOpen(false)}
-                  className=" capitalize font-normal text-lg hover:text-primary transition-colors duration-200"
+                  className="uppercase text-lg"
                 >
                   {link.name}
                 </a>

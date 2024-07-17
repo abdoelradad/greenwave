@@ -37,5 +37,20 @@ body {
 }
 
 .btn-primary {
-    @apply mx-auto block text-primary border-[1px] px-4 py-2 rounded-2xl border-primary tracking-widest capitalize
+    @apply mx-auto block text-primary border-[1px] px-4 py-2 rounded-2xl border-primary tracking-widest capitalize overflow-hidden relative hover:text-black
+}
+
+.btn-primary::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-color: #f0bd7c;
+    position: absolute;
+    bottom: -100%;
+    transition: all 0.3s;
+    left: 0;
+    z-index: -10;
+}
+.btn-primary:hover::before {
+    bottom: 0;
 }

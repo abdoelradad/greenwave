@@ -30,7 +30,7 @@ const MenuItems = [
 
 const Menu = () => {
   return (
-    <section className="py-24" id="menu">
+    <section className="py-24 max-w-6xl mx-auto overflow-hidden px-5" id="menu">
       <h1 className="title text-4xl md:text-5xl cursor-default tracking-tight font-bold capitalize text-center">
         <span className=" text-primary">our</span> menu
       </h1>
@@ -44,7 +44,6 @@ const Menu = () => {
             <img
               src={menuItem}
               alt=""
-              className="group-hover:scale-105 transition-all duration-200"
             />
             <div className="flex flex-col items-center gap-2">
               <h2 className="capitalize text-lg">{item.name}</h2>

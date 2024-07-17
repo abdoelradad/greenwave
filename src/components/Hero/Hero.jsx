@@ -8,7 +8,7 @@ import bg from "../../assets/bg.png";
 
 const Hero = () => {
   return (
-    <section className="pt-10">
+    <section className="pt-10 max-w-6xl mx-auto overflow-hidden px-5">
       <div className="grid grid-cols-1 text-center relative">
         <img src={bb} alt="" className=" absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] opacity-5 -z-10" />
         <p className="text-sm uppercase text-gray-500 mb-4">
