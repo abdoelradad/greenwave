@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { BiCoffeeTogo } from "react-icons/bi";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
-
 import { TfiMenu } from "react-icons/tfi";
 import Logo from "../Logo/Logo";
+
 const linksLeft = [
   {
     name: "home",

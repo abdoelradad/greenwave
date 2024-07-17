@@ -21,7 +21,7 @@ const Hero = () => {
         </p>
         <motion.h1
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1.5 }}
           className="title text-5xl md:text-6xl cursor-default tracking-tight font-bold"
         >
