@@ -6,12 +6,12 @@ export function Footer() {
         <div className="absolute  -translate-x-1/2 -translate-y-1/2 flex  gap-x-1 font-bold  sm:pl-44 ">
           &copy; DEATH
           <span>
-            <BiCoffeeTogo className=" text-primary pt-1 text-2xl" />
+            <BiCoffeeTogo className=" text-primary pt-1 text-xl md:text-2xl" />
           </span>
           COFFEE
         </div>
       </div>
-      <ul className="flex flex-wrap items-center gap-y-2 gap-x-8">
+      <ul className="flex flex-wrap items-center gap-y-2 gap-x-6 md:gap-x-8">
         <li>
           <div
             as="a"
