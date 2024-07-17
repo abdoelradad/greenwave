@@ -1,14 +1,14 @@
 import { BiCoffeeTogo } from "react-icons/bi";
+import Logo from "../Logo/Logo";
 export function Footer() {
   return (
     <footer className="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-60 border-t border-blue-gray-50 p-6 text-center sm:justify-between ">
       <div>
         <div className="absolute  -translate-x-1/2 -translate-y-1/2 flex  gap-x-1 font-bold  sm:pl-44 ">
-          &copy; DEATH
-          <span>
-            <BiCoffeeTogo className=" text-primary pt-1 text-xl md:text-2xl" />
+          &copy;
+          <span className="pl-1">
+          <Logo />
           </span>
-          COFFEE
         </div>
       </div>
       <ul className="flex flex-wrap items-center gap-y-2 gap-x-6 md:gap-x-8">
