@@ -38,7 +38,7 @@ export const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   return (
     <>
-      <nav className="sticky w-full top-0 left-0 z-50 bg-[#121212] py-6 px-3">
+      <nav className="sticky w-full top-0 left-0 z-30 bg-[#121212] py-6 px-3">
         <div className="flex items-center justify-between w-full max-w-6xl mx-auto relative px-3">
           <ul className="hidden md:flex md:items-center gap-10">
             {linksLeft.map((link) => (

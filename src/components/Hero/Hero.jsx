@@ -21,7 +21,7 @@ const Hero = () => {
         </p>
         <motion.h1
           initial={{ x: -100, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
+          whileInView={{ x: 0, opacity: 1 }}
           transition={{ duration: 1 }}
           className="title text-5xl md:text-6xl cursor-default tracking-tight font-bold"
         >
@@ -34,7 +34,7 @@ const Hero = () => {
         <div className="flex items-center justify-center">
           <motion.img
             initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
+            whileInView={{ x: 0, opacity: 1 }}
             transition={{ duration: 1 }}
             src={coffee}
             alt="coffee"

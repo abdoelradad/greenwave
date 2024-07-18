@@ -47,15 +47,20 @@ const About = () => {
   return (
     <section className="py-24 relative bg-[#141414]" id="about">
       <div className="max-w-6xl mx-auto overflow-hidden px-5 relative">
-        <h1 className="title text-4xl md:text-5xl cursor-default tracking-tight font-bold capitalize text-center ">
+        <motion.h1
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1.5 }}
+          className="title text-4xl md:text-5xl cursor-default tracking-tight font-bold capitalize text-center "
+        >
           <span className=" text-primary">our</span> story
-        </h1>
+        </motion.h1>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16 place-items-center">
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
             className="w-full flex items-center flex-col gap-10"
           >
             {left.map((item) => (
@@ -74,16 +79,16 @@ const About = () => {
 
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
           >
             <img src={coffee} alt="" className="w-[350px] bg-cover" />
           </motion.div>
 
           <motion.div
             initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1.5 }}
             className="w-full flex items-center flex-col gap-10"
           >
             {right.map((item) => (

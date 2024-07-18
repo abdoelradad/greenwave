@@ -8,10 +8,6 @@ export function Footer() {
           <Logo />
         </div>
 
-       <div className="text-sm text-gray-400">
-          @ copy rights All rights reserved
-        </div> 
-
         <ul className="flex flex-wrap items-center gap-y-2 gap-x-6 md:gap-x-8">
           <li>
             <div
@@ -44,6 +40,10 @@ export function Footer() {
             </div>
           </li>
         </ul>
+
+       <div className="text-sm text-gray-400">
+        &copy; All rights reserved
+        </div> 
       </div>
     </footer>
   );
