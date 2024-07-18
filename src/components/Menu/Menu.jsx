@@ -135,36 +135,33 @@ const Menu = () => {
               </p>
               <button
                 className="btn-primary text-xs"
-                onClick={() => setIsModal(true)}
+                onClick={() => (setIsModal(true), modalIndex(index))}
               >
                 see details
               </button>
+              {isModal && (
+                <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#121212] shadow-md rounded-xl w-[80%] md:w-[400px] h-[60%] z-50">
+                  <h1 className="text-center py-8 text-xl text-primary">
+                    {item.name}
+                  </h1>
+                  <ul className="flex items-center flex-col gap-5">
+                    {item.details.map((feat, index) => {
+                      return (
+                        <li key={index} className="text-sm text-gray-300">
+                          {feat.detail}
+                        </li>
+                      );
+                    })}
+                  </ul>
+                  <button
+                    onClick={() => setIsModal(false)}
+                    className=" absolute right-6 top-5"
+                  >
+                    <IoClose size={30} />
+                  </button>
+                </div>
+              )}
             </div>
-            {isModal && (
-              <div className=" z-50  fixed top-0 left-0 w-full h-full bg-black opacity-80"></div>
-            )}
-            {isModal && (
-              <div className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-[#121212] shadow-md rounded-xl w-[80%] md:w-[400px] h-[60%] z-50">
-                <h1 className="text-center py-8 text-xl text-primary">
-                  Product details
-                </h1>
-                <ul className="flex items-center flex-col gap-5">
-                  {item.details.map((feat, index) => {
-                    return (
-                      <li key={index} className="text-sm text-gray-300">
-                        {feat.detail}
-                      </li>
-                    );
-                  })}
-                </ul>
-                <button
-                  onClick={() => setIsModal(false)}
-                  className=" absolute right-6 top-5"
-                >
-                  <IoClose size={30} />
-                </button>
-              </div>
-            )}
           </div>
         ))}
       </div>

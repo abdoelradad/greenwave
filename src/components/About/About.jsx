@@ -51,10 +51,10 @@ const About = () => {
           <span className=" text-primary">our</span> story
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-24 place-items-center">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 mt-16 place-items-center">
           <motion.div
-            initial={{ opacity: 0, x: -100 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="w-full flex items-center flex-col gap-10"
           >
@@ -73,16 +73,16 @@ const About = () => {
           </motion.div>
 
           <motion.div
-            initial={{ y: 100 }}
-            animate={{ y: 0 }}
-            transition={{ duration: 1.5 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1 }}
           >
             <img src={coffee} alt="" className="w-[350px] bg-cover" />
           </motion.div>
 
           <motion.div
-            initial={{ opacity: 0, x: 100 }}
-            animate={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 1 }}
             className="w-full flex items-center flex-col gap-10"
           >

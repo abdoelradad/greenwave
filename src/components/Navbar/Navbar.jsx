@@ -98,7 +98,7 @@ export const Navbar = () => {
             {linksLeft.map((link) => (
               <li>
                 <a
-                  href="#"
+                  href={link.href}
                   onClick={() => setIsOpen(false)}
                   className="uppercase text-lg"
                 >
@@ -111,7 +111,7 @@ export const Navbar = () => {
             {linksRight.map((link) => (
               <li>
                 <a
-                  href="#"
+                  href={link.href}
                   onClick={() => setIsOpen(false)}
                   className="uppercase text-lg"
                 >

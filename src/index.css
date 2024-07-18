@@ -37,7 +37,7 @@ body {
 }
 
 .btn-primary {
-    @apply mx-auto block text-primary border-[1px] px-4 py-2 rounded-2xl border-primary tracking-widest capitalize overflow-hidden relative hover:text-black
+    @apply mx-auto block text-primary border-[1px] px-5 py-2 rounded-2xl border-primary capitalize overflow-hidden relative hover:text-black font-semibold
 }
 
 .btn-primary::before {
