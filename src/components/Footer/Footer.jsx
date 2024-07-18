@@ -2,49 +2,50 @@ import { BiCoffeeTogo } from "react-icons/bi";
 import Logo from "../Logo/Logo";
 export function Footer() {
   return (
-    <footer className="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-60 border-t border-blue-gray-50 p-6 text-center sm:justify-between ">
-      <div>
-        <div className="absolute  -translate-x-1/2 -translate-y-1/2 flex  gap-x-1 font-bold  sm:pl-44 ">
-          &copy;
-          <span className="pl-1">
+    <footer className="flex w-full flex-row flex-wrap items-center justify-center gap-y-6 gap-x-60 border-t border-gray-700 py-10 text-center sm:justify-between ">
+      <div className="max-w-6xl mx-auto flex items-center justify-center flex-col gap-5">
+        <div className="flex items-center justify-center gap-x-1">
           <Logo />
-          </span>
         </div>
+
+       <div className="text-sm text-gray-400">
+          @ copy rights All rights reserved
+        </div> 
+
+        <ul className="flex flex-wrap items-center gap-y-2 gap-x-6 md:gap-x-8">
+          <li>
+            <div
+              as="a"
+              href="#"
+              color="blue-gray"
+              className="font-normal transition-colors hover:text-primary"
+            >
+              About Us
+            </div>
+          </li>
+          <li>
+            <div
+              as="a"
+              href="#"
+              color="blue-gray"
+              className="font-normal transition-colors hover:text-primary"
+            >
+              License
+            </div>
+          </li>
+          <li>
+            <div
+              as="a"
+              href="#"
+              color="blue-gray"
+              className="font-normal transition-colors hover:text-primary"
+            >
+              Contact Us
+            </div>
+          </li>
+        </ul>
       </div>
-      <ul className="flex flex-wrap items-center gap-y-2 gap-x-6 md:gap-x-8">
-        <li>
-          <div
-            as="a"
-            href="#"
-            color="blue-gray"
-            className="font-normal transition-colors hover:text-primary"
-          >
-            About Us
-          </div>
-        </li>
-        <li>
-          <div
-            as="a"
-            href="#"
-            color="blue-gray"
-            className="font-normal transition-colors hover:text-primary"
-          >
-            License
-          </div>
-        </li>
-        <li>
-          <div
-            as="a"
-            href="#"
-            color="blue-gray"
-            className="font-normal transition-colors hover:text-primary"
-          >
-            Contact Us
-          </div>
-        </li>
-      </ul>
     </footer>
   );
 }
 export default Footer;
-
